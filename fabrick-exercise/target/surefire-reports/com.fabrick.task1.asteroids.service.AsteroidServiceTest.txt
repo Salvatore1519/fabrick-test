@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+Test set: com.fabrick.task1.asteroids.service.AsteroidServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.946 s <<< FAILURE! -- in com.fabrick.task1.asteroids.service.AsteroidServiceTest
+com.fabrick.task1.asteroids.service.AsteroidServiceTest.testGetPaths_basic -- Time elapsed: 2.883 s <<< FAILURE!
+java.lang.AssertionError: expectation "expectNextCount(2)" failed (expected: count = 2; actual: counted = 0; signal: onError(java.lang.UnsupportedOperationException))
+	at reactor.test.MessageFormatter.assertionError(MessageFormatter.java:115)
+	at reactor.test.MessageFormatter.failPrefix(MessageFormatter.java:104)
+	at reactor.test.MessageFormatter.fail(MessageFormatter.java:73)
+	at reactor.test.MessageFormatter.failOptional(MessageFormatter.java:88)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultVerifySubscriber.checkCountMismatch(DefaultStepVerifierBuilder.java:1372)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultVerifySubscriber.onSignalCount(DefaultStepVerifierBuilder.java:1610)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultVerifySubscriber.onExpectation(DefaultStepVerifierBuilder.java:1467)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultVerifySubscriber.onError(DefaultStepVerifierBuilder.java:1129)
+	at reactor.core.publisher.Operators.error(Operators.java:198)
+	at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:162)
+	at reactor.core.publisher.MonoFlatMapMany.subscribeOrReturn(MonoFlatMapMany.java:49)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8762)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultStepVerifier.toVerifierAndSubscribe(DefaultStepVerifierBuilder.java:891)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultStepVerifier.verify(DefaultStepVerifierBuilder.java:831)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultStepVerifier.verify(DefaultStepVerifierBuilder.java:823)
+	at reactor.test.DefaultStepVerifierBuilder.verifyComplete(DefaultStepVerifierBuilder.java:690)
+	at com.fabrick.task1.asteroids.service.AsteroidServiceTest.testGetPaths_basic(AsteroidServiceTest.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.UnsupportedOperationException
+		at java.base/java.util.ImmutableCollections.uoe(ImmutableCollections.java:142)
+		at java.base/java.util.ImmutableCollections$AbstractImmutableCollection.removeIf(ImmutableCollections.java:152)
+		at com.fabrick.task1.asteroids.service.AsteroidService.lambda$getPaths$1(AsteroidService.java:38)
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:153)
+		... 10 more
+
